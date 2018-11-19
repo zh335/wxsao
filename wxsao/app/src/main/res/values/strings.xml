@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">HS0</string>
+    <string name="app_name">微信扫一扫</string>
+    <string name="launch_wx_sys">微信扫一扫</string>
+    <string name="auto_launch_wx_sys">微信自动扫一扫</string>
 </resources>

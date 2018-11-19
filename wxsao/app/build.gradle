@@ -6,15 +6,11 @@ android {
 
     signingConfigs {
         sign {
-            storeFile file('../keystore/p3.keystore')
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
-            storePassword 'android'
         }
     }
 
     defaultConfig {
-        applicationId "com.anl.app"
+        applicationId "com.wxsao.app"
         minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
@@ -24,12 +20,10 @@ android {
         debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.sign
         }
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.sign
         }
     }
 
@@ -42,9 +36,8 @@ repositories {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    //implementation(name: 'libhs-1.0.6-release', ext: 'aar')
-    implementation('com.hs.lib:libhs:1.0.8')
-    implementation('com.yxhty.accessibilityutil:libss:1.0.1')
+    //implementation('com.hs:app-release:1.0.0')
+    implementation(name: 'app-release-1.0.0', ext: 'aar')
     implementation('com.android.support:support-v4:27.1.0') {
         exclude group: 'com.android.support', module: 'support-core-ui'
         exclude group: 'com.android.support', module: 'support-media-compat'
