@@ -6,6 +6,10 @@ android {
 
     signingConfigs {
         sign {
+            storeFile file('D:/AndroidSDK/keystore/p3.keystore')
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storePassword 'android'
         }
     }
 
@@ -24,6 +28,7 @@ android {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.sign
         }
     }
 
