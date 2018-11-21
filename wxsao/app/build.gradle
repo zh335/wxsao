@@ -6,10 +6,6 @@ android {
 
     signingConfigs {
         sign {
-            storeFile file('D:/AndroidSDK/keystore/p3.keystore')
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
-            storePassword 'android'
         }
     }
 
@@ -28,7 +24,7 @@ android {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.sign
+            //signingConfig signingConfigs.sign
         }
     }
 
@@ -41,8 +37,8 @@ repositories {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    //implementation('com.hs:app-release:1.0.0')
-    implementation(name: 'app-release-1.0.0', ext: 'aar')
+    //implementation('com.hs:app-release:1.0.1')
+    implementation(name: 'app-release-1.0.1', ext: 'aar')
     implementation('com.android.support:support-v4:27.1.0') {
         exclude group: 'com.android.support', module: 'support-core-ui'
         exclude group: 'com.android.support', module: 'support-media-compat'
